@@ -1,5 +1,7 @@
 <?php
 
+//use Illuminate\Http\Request;
+//use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function (Request $request) {
+//    Log::alert(var_export($request->all(), true));
     return view('welcome');
 });
