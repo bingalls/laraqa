@@ -36,22 +36,19 @@ class MsgRepo
         $validator = Validator::make($query, [
             'email' => 'required|email',
             'name' => 'required|between:4,80',
-            'phone' => 'digits:10|min:100000000',
+            'phone' => 'digits:10',
             'sent' => 'boolean',
             'message' => 'required|between:4,4096',
         ]);
 
-        if ($validator->failed()) {
-            print_r($query);
-            echo "FAIL!!!\n";
+        if ($validator->fails()) {
             return redirect('/')
                 ->withErrors($validator)
-                ->withInput();
+                ->withInput()
+                ->setStatusCode(400);
         }
 
         $this->model->save($query);
-
-        echo "success!!!\n";
         return redirect('/');
     }
 
