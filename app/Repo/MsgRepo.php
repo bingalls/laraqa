@@ -49,7 +49,7 @@ class MsgRepo
         }
 
         $this->model->save($query);
-        return redirect('/');
+        return redirect('/message');
     }
 
 

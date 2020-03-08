@@ -1823,6 +1823,10 @@ compression@^1.7.4:
     safe-buffer "5.1.2"
     vary "~1.1.2"
 
+computed-style@TooTallNate/computed-style:
+  version "0.1.0"
+  resolved "https://codeload.github.com/TooTallNate/computed-style/tar.gz/02f27f3bfd9a32a50332a250d86a7e1c44d67782"
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -2191,6 +2195,11 @@ d@1, d@^1.0.1:
   dependencies:
     es5-ext "^0.10.50"
     type "^1.0.1"
+
+de-indent@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
+  integrity sha1-sgOOhG3DO6pXlhKNCAS0VbjB4h0=
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
@@ -2623,6 +2632,18 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+
+event-component@component/event:
+  version "0.2.0"
+  resolved "https://codeload.github.com/component/event/tar.gz/4d398f80ae1c0033c49b237feb7804e13595ab5e"
+
+event@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/event/-/event-1.0.0.tgz#b51232b67ad4e0fe38c4a8cbaff2ff8685278ce3"
+  integrity sha1-tRIytnrU4P44xKjLr/L/hoUnjOM=
+  dependencies:
+    method "~1.0.0"
+    reducible "~1.0.1"
 
 eventemitter3@^4.0.0:
   version "4.0.0"
@@ -3152,6 +3173,14 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
 
+grayscale@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/grayscale/-/grayscale-0.0.2.tgz#02c7425f1c8481a134492e196ee921d858a636a9"
+  integrity sha1-AsdCXxyEgaE0SS4Zbukh2FimNqk=
+  dependencies:
+    computed-style TooTallNate/computed-style
+    event-component component/event
+
 growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
@@ -3243,7 +3272,7 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
-he@1.2.x:
+he@1.2.x, he@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
@@ -4088,6 +4117,11 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+mailtoui@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/mailtoui/-/mailtoui-1.0.3.tgz#198792b569d7cfcaa6ccb008cc2359ac89db7ee9"
+  integrity sha512-Rse/OFWqSMuc/7D/Pw+dnkWwWLIhSx9hsZMb+9RaIOYJcQgd8SNV5YtM5b5GdBIwM2Di59oRk1Wz929X9UeUeg==
+
 make-dir@^1.0.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.3.0.tgz#79c1033b80515bd6d24ec9933e860ca75ee27f0c"
@@ -4208,6 +4242,16 @@ merge2@^1.2.3:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.3.0.tgz#5b366ee83b2f1582c48f87e47cf1a9352103ca81"
   integrity sha512-2j4DAdlBOkiSZIsaXk4mTE3sRS02yBHAtfy127xRV3bQUFqXkjHCHLW6Scv7DwNRbIWNHH8zpnz9zMaKXIdvYw==
+
+method@~1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/method/-/method-1.0.2.tgz#291f8c29ee443847a2f8906f89fbaa372d4d0916"
+  integrity sha1-KR+MKe5EOEei+JBvifuqNy1NCRY=
+
+method@~2.0.x:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/method/-/method-2.0.0.tgz#e449848defa6daef10b8163d9d9aa2d071b7500f"
+  integrity sha1-5EmEje+m2u8QuBY9nZqi0HG3UA8=
 
 methods@~1.1.2:
   version "1.1.2"
@@ -4919,6 +4963,11 @@ pkg-dir@^4.1.0:
   dependencies:
     find-up "^4.0.0"
 
+popper.js@^1.16.1:
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
+  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
+
 portfinder@^1.0.25:
   version "1.0.25"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.25.tgz#254fd337ffba869f4b9d37edc298059cb4d35eca"
@@ -5481,6 +5530,13 @@ recast@~0.11.12:
     esprima "~3.1.0"
     private "~0.1.5"
     source-map "~0.5.0"
+
+reducible@~1.0.1:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/reducible/-/reducible-1.0.6.tgz#331722d14189f8f392dc9b88341aec603b25c35e"
+  integrity sha1-Mxci0UGJ+POS3JuINBrsYDslw14=
+  dependencies:
+    method "~2.0.x"
 
 regenerate-unicode-properties@^8.1.0:
   version "8.1.0"
@@ -6649,6 +6705,14 @@ vue-style-loader@^4.1.0:
   dependencies:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
+
+vue-template-compiler@^2.6.11:
+  version "2.6.11"
+  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.11.tgz#c04704ef8f498b153130018993e56309d4698080"
+  integrity sha512-KIq15bvQDrcCjpGjrAhx4mUlyyHfdmTaoNfeoATHLAiWB+MU3cx4lOzMwrnUh9cCxy0Lt1T11hAFY6TQgroUAA==
+  dependencies:
+    de-indent "^1.0.2"
+    he "^1.1.0"
 
 vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"

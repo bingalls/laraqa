@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Message;
+use App\Repo\MsgRepo;
 use Illuminate\Http\Request;
 
 class MessagesController extends Controller
@@ -31,11 +32,19 @@ class MessagesController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data['sent'] = true;       // Todo: verify email actually sent
+        $msg = new Message($data);
+        $repo = new MsgRepo($msg);
+        $redirect = $repo->create($request->all());
+        if ($redirect->getStatusCode() === 301) {
+            return view('message');
+        }
+        return view('error');
     }
 
     /**

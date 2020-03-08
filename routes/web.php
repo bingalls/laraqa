@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function (Request $request) {
-//    Log::alert(var_export($request->all(), true));
+Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('message', 'MessagesController');
