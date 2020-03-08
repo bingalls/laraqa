@@ -1,3 +1,3 @@
-require('jquery');
-require('bootstrap');
-require('grayscale');
+// require('jquery');
+// require('bootstrap');
+// require('grayscale');

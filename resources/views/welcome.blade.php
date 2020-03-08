@@ -20,26 +20,25 @@
     <!-- Theme CSS -->
     <link href="/css/grayscale.min.css" rel="stylesheet">
 
-    {{-- Deprecating IE8 support --}}
     {{--<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->--}}
     {{--<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->--}}
-    {{--<!--[if lt IE 9]>--}}
-        {{--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>--}}
-        {{--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>--}}
-    {{--<![endif]-->--}}
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-expand-md navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand page-scroll" href="#page-top" style="padding-left: 1rem">
                     <i class="fa fa-play-circle"></i> <span class="light">Laravel</span> QA Demo
                 </a>
             </div>
@@ -52,13 +51,13 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about" style="padding-left: 2rem;">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#coffee">Coffee</a>
+                        <a class="page-scroll" href="#coffee" style="padding-left: 2rem;">Coffee</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact" style="padding-left: 2rem;">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -115,7 +114,9 @@
                 <h2>Contact Guy Smiley</h2>
                 <p>Remember Guy Smiley?  Yeah, he wants to hear from you.</p>
                 <p class="bg-primary">
-                    [[ This is where you'd put your contact form.  Get it done! ]]
+                    <form method="post" action="/messages">
+
+                    </form>
                 </p>
             </div>
         </div>
