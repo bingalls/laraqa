@@ -10,7 +10,8 @@
     <title>LaraQA</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    {{--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">--}}
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -116,12 +117,12 @@
                 <!--suppress HtmlUnknownTarget -->
                 <form method="post" action="/message">
                     @csrf
-                    <label for="email">Email <input id="email" name="email" type="email" /></label>
-                    <label for="name">Name <input id="name" name="name" type="text" /></label>
-                    <label for="phone">Phone <input id="phone" name="phone" type="tel" /></label>
-                    <label for="message">Message <textarea id="message" name="message">Hi, Guy</textarea></label>
-
-                    <input type="submit" title="Send Email" />
+                    <label for="email">Email <input class="form-control" id="email" name="email" type="email" /></label>
+                    <label for="name">Name <input class="form-control" id="name" name="name" type="text" /></label>
+                    <label for="phone">Phone <input class="form-control" id="phone" name="phone" type="tel" /></label>
+                    <label for="message">Message <textarea class="form-control" id="message" name="message">Hi, Guy</textarea></label>
+                    <br />
+                    <input class="btn-primary" type="submit" style="margin:1rem" title="Send Email" />
                 </form>
                 <p class="bg-primary">
                     {{--<a class="mailtoui" href="mailto:guy@example.com">Contact Guy</a>--}}

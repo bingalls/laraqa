@@ -10,6 +10,7 @@ git clone https://github.com/bingalls/laraqa
 cd laraqa
 composer install
 yarn
+yarn run dev  # optional webpack
 ```
 Configure .env for database. Note that PHP 7.3 may have issues writing to sqlite
 [Configure .env for gmail](https://www.justinsilver.com/technology/osx/send-emails-mac-os-x-postfix-gmail-relay/)
@@ -24,6 +25,8 @@ php artisan serve
 ## What's Provided
 
 The home page uses Twitter Bootstrap Greyscale theme, and includes Open Street Map.
+
+Note that Greyscale theme breaks when Bootstrap is upgraded past v4.3
 
 ## The Essentials
 
