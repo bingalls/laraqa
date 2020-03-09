@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendMsg;
 use App\Message;
 use App\Repo\MsgRepo;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\View\View;
 
 class MessagesController extends Controller
 {
@@ -13,9 +17,9 @@ class MessagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(): Response
     {
-        //
+        return new Response();
     }
 
     /**
@@ -23,27 +27,30 @@ class MessagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(): Response
     {
-        //
+        return new Response();
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @param  Request  $request
+     * @return View
      */
-    public function store(Request $request)
+    public function store(Request $request): View
     {
         $data = $request->all();
-        $data['sent'] = true;       // Todo: verify email actually sent
+        $data['sent'] = true;       // TODO keeping this to 1 DB call simply for now
         $msg = new Message($data);
         $repo = new MsgRepo($msg);
         $redirect = $repo->create($request->all());
-        if ($redirect->getStatusCode() === 301) {
+
+        if (in_array($redirect->getStatusCode(), [200, 301, 302], true)) {
+            Mail::to(getenv('MAIL_TO'))->send(new SendMsg($data));
             return view('message');
         }
+
         return view('error');
     }
 
@@ -53,10 +60,10 @@ class MessagesController extends Controller
      * @param  \App\Message  $messages
      * @return \Illuminate\Http\Response
      */
-    public function show(Message $messages)
-    {
-        //
-    }
+//    public function show(Message $messages): Response
+//    {
+//        return new Response();
+//    }
 
     /**
      * Show the form for editing the specified resource.
@@ -64,10 +71,10 @@ class MessagesController extends Controller
      * @param  \App\Message  $messages
      * @return \Illuminate\Http\Response
      */
-    public function edit(Message $messages)
-    {
-        //
-    }
+//    public function edit(Message $messages): Response
+//    {
+//        return new Response();
+//    }
 
     /**
      * Update the specified resource in storage.
@@ -76,10 +83,10 @@ class MessagesController extends Controller
      * @param  \App\Message  $messages
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Message $messages)
-    {
-        //
-    }
+//    public function update(Request $request, Message $messages): Response
+//    {
+//        return new Response();
+//    }
 
     /**
      * Remove the specified resource from storage.
@@ -87,8 +94,8 @@ class MessagesController extends Controller
      * @param  \App\Message  $messages
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Message $messages)
-    {
-        //
-    }
+//    public function destroy(Message $messages): Response
+//    {
+//        return new Response();
+//    }
 }

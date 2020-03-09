@@ -113,6 +113,7 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact Guy Smiley</h2>
                 <p>Remember Guy Smiley?  Yeah, he wants to hear from you.</p>
+                <!--suppress HtmlUnknownTarget -->
                 <form method="post" action="/message">
                     @csrf
                     <label for="email">Email <input id="email" name="email" type="email" /></label>
