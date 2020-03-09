@@ -50,4 +50,19 @@ class MsgTest extends TestCase
         $this->assertEquals(400, $response->getStatusCode());
     }
 
+    public function testPhoneNotRequired()
+    {
+        $msg = factory(Message::class)->make();
+        $this->repo = new MsgRepo($msg);
+        $faker = Faker::create();
+        $data = [
+            'email' => $faker->unique()->safeEmail,
+            'name' => $faker->name,
+            'sent' => $faker->boolean,
+            'message' => Str::random(100),
+        ];
+        $response = $this->repo->create($data);
+        $this->assertEquals(302, $response->getStatusCode());
+    }
+
 }
