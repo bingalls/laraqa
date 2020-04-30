@@ -24,7 +24,7 @@
         "event": "^1.0.0",
         "font-awesome": "^4.7.0",
         "grayscale": "0.0.2",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "mailtoui": "^1.0.3",
         "popper.js": "^1.16.1"
     }
